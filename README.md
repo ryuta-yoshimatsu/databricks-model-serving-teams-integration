@@ -28,7 +28,7 @@ The first post explains how to integrate the Azure Web App and Azure Bot with th
 
 ## Part 3: Cloning a Repo and Deploying Your App
 
-1. Use the code `Databricks_Model_Serving_Endpoint_Teams.zip` provided.  
+1. Use the code in this repository.  
    - Edit the `config.py` file and provide the required information.  
 
 ### Step 2 — Install necessary dependencies
