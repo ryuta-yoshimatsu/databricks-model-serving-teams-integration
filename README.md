@@ -21,8 +21,8 @@ The first post explains how to integrate the Azure Web App and Azure Bot with th
      ```
 
 ### Step 4 — Create your Azure Bot
-- **Type of App** should be **Multi Tenant**  
-  *(as of August 1, 2025 only multi tenant apps are supported).*
+- **Type of App** should be **Single Tenant**  
+  *(as of August 1, 2025 only single tenant apps are supported).*
 
 ---
 
