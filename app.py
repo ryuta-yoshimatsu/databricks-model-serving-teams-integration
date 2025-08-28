@@ -60,7 +60,7 @@ async def ask_serving_endpoint(question: str) -> str:
     """
     try:
         # Prepare messages (single turn conversation)
-        messages = [
+        input = [
             {
                 "role": "system",
                 "content": "You are a helpful AI assistant."
@@ -73,7 +73,7 @@ async def ask_serving_endpoint(question: str) -> str:
         
         # Request payload
         payload = {
-            "messages": messages,
+            "input": input,
         }
         
         # Headers
@@ -89,10 +89,14 @@ async def ask_serving_endpoint(question: str) -> str:
             async with session.post(endpoint_url, json=payload, headers=headers) as response:
                 if response.status == 200:
                     result = await response.json()
-                    if "choices" in result and len(result["choices"]) > 0:
-                        content = result["choices"][0]["message"]["content"]
-                        # Ensure we return a string
-                        return str(content) if content is not None else "I didn't receive a proper response from the AI model."
+                    if "output" in result:
+                        for item in result["output"]:
+                            # Look for the assistant message type
+                            if item.get("type") == "message":
+                                content = item.get("content", [])
+                                for c in content:
+                                    if c.get("type") == "output_text":
+                                        return c.get("text", "")
                     else:
                         return "I didn't receive a proper response from the AI model."
                 else:
