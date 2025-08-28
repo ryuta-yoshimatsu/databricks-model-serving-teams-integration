@@ -1,7 +1,6 @@
 Please follow these two blog posts:<br>
 
 [Microsoft Teams Meets Databricks Genie API: A Complete Setup Guide](https://medium.com/@ryan-bates/microsoft-teams-meets-databricks-genie-api-a-complete-setup-guide-81f629ace634)<br>
-
 [Microsoft Teams <-> Databricks Genie API - End to End Integration](https://saiponugoti.medium.com/microsoft-teams-databricks-genie-api-end-to-end-integration-2d22b4767e33)<br>
 
 The first post explains how to integrate the Azure Web App and Azure Bot with the Model Serving endpoint (please download the code from this repository). The second post describes how to connect the Azure Bot to Teams. There has been a small update to one of the configurations in the first article (changing from Multi Tenant to Single Tenant), and this requires a few modifications, which I have listed below. The steps that are not listed below should be unchanged.
