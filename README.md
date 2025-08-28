@@ -1,5 +1,4 @@
 Please follow these two blog posts:<br>
-
 [Microsoft Teams Meets Databricks Genie API: A Complete Setup Guide](https://medium.com/@ryan-bates/microsoft-teams-meets-databricks-genie-api-a-complete-setup-guide-81f629ace634)<br>
 [Microsoft Teams <-> Databricks Genie API - End to End Integration](https://saiponugoti.medium.com/microsoft-teams-databricks-genie-api-end-to-end-integration-2d22b4767e33)<br>
 
